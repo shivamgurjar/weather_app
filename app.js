@@ -4,7 +4,7 @@ const inp = document.getElementById('city_input');
 
 async function show_weather(city){
     const api_key = '7c6a18975a7913a95ba3941e3dfe9bb8';
-    let link = 'http://api.openweathermap.org/data/2.5/weather?q='+city+'&appid='+api_key;
+    let link = 'https://api.openweathermap.org/data/2.5/weather?q='+city+'&appid='+api_key;
 
     const res = await fetch(link);
     //console.log(res.status);
