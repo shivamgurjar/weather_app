@@ -10,9 +10,9 @@ async function show_weather(city){
     //console.log(res.status);
     if(res.status===200){
         const data = await res.json();
-        console.log(data);
+        //console.log(data);
         document.getElementById('city').textContent = data.name;
-        console.log(data.weather[0].main);
+        //console.log(data.weather[0].main);
         document.getElementById('status').textContent = data.weather[0].main;
         document.getElementById('tempreture').textContent = Math.round(data.main.feels_like - 273) + "°C";
 
