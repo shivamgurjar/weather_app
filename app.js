@@ -17,8 +17,11 @@ async function show_weather(city){
     const api_key = '7c6a18975a7913a95ba3941e3dfe9bb8';
     let link = 'https://api.openweathermap.org/data/2.5/weather?q='+city+'&appid='+api_key;
 
+
     const res = await fetch(link);
-    if(res.status===200){
+    console.clear();
+    if(res.status>=400)console.log("Could not find city");
+    else if(res.status===200){
         const data = await res.json();
    
         document.getElementById('city').textContent = data.name;
@@ -41,7 +44,7 @@ async function show_weather(city){
         const lattitude = data.coord.lat;
         const longitude = data.coord.lon;
 
-        let req_link = 'https://api.geonames.org/countryCodeJSON?lat='+lattitude+'&lng='+longitude+'&username=hunky_07';
+        let req_link = 'http://api.geonames.org/countryCodeJSON?lat='+lattitude+'&lng='+longitude+'&username=hunky_07';
         find_country(req_link);
 
     }else{
