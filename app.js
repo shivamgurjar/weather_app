@@ -34,14 +34,14 @@ async function show_weather(city){
         else day_night_icon.src = "images/night.svg";
 
         // Writing the weather description
-        document.getElementById('image').src = ' http://openweathermap.org/img/wn/' + ic + '@4x.png';
+        document.getElementById('image').src = ' https://openweathermap.org/img/wn/' + ic + '@4x.png';
         document.getElementById('description').textContent = '(' + data.weather[0].description + ')';
 
         // Finding the full country name with another REST API service http://www.geonames.org
         const lattitude = data.coord.lat;
         const longitude = data.coord.lon;
 
-        let req_link = 'http://api.geonames.org/countryCodeJSON?lat='+lattitude+'&lng='+longitude+'&username=hunky_07';
+        let req_link = 'https://api.geonames.org/countryCodeJSON?lat='+lattitude+'&lng='+longitude+'&username=hunky_07';
         find_country(req_link);
 
     }else{
