@@ -15,15 +15,21 @@
         </div>
             <div id="showpage" >
                 <div>
-                    <p id="city">Jaipur, IN</p>
-                <p id="date"><script> document.write(new Date().toDateString()); </script></p>
-                <p id="tempreture">20°C</p>
-                <p id="status">Clear</p>
-                <p id="min_max">20°C / 36°C</p>
+                    <div id="city_div"><p id="city">Jaipur </p><div><img id="day_night" src="images/day.svg" alt="" ></div></div>
+                
+                    <p id="country">(India)</p>
+                    <p id="date"><script> document.write(new Date().toDateString()); </script></p>
+                    <p id="tempreture">XX°C</p>
+                    <p id="status">******</p>
+                    <p id="min_max">xx°C / xx°C</p>
                 </div>
                 <!-- This image will show the photo of the city, but there is some billing issue with my Google Cloud account.
                 I cannot access the photos through Photos Places API of Google. -->
-                <div id="image_div"><img id="image" src="images/demo.png" alt=""></div>
+                <!-- Instead of that I am currently replacing it with weather icons. -->
+                <div id="image_div">
+                    <img id="image" src="images/demo_icon.png" alt="">
+                    <p style="text-align: center;" id="description">--------</p>
+                </div>
             </div>
         
     </div>
