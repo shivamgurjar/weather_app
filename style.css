@@ -1,12 +1,15 @@
-html { 
-    background: url(blue1.jpg) no-repeat center center fixed; 
+body { 
+    background: url(images/blue1.jpg) no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
   }
 
-
+p{
+    display: block;
+}
+ 
 #city{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 45px;
@@ -47,22 +50,45 @@ html {
 
 #city_input{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 15px;
     text-align: center;
     padding: 3px 10px 3px 10px;
     display: block;
     margin: 5px auto;
-    width: 100px;
+    width: 120px;
     height: 20px;
     border-top-left-radius: 10px;
     border-bottom-right-radius: 10px;
-    border: solid rgb(56, 186, 247);
+    border: solid rgb(54, 184, 245);
     border-width: 0px 3px 3px 0px;
     /* border: 0px solid rgb(179, 218, 255); */
-    box-shadow: 0px 5px 5px rgb(37, 107, 187);
+    box-shadow: 0px 3px 3px rgb(0, 130, 170);
 }
 
 #city_input:focus{
     outline: none;
 }
 
+#showpage{
+    display: flex;
+    border: 3px solid rgb(5, 5, 5,0.1);
+    border-radius: 20px;
+    min-width: 200px;
+    width: fit-content;
+    margin: 20px auto;
+    padding-inline: 20px;
+    background-color: rgb(5, 5, 5, 0.4);
+    transition: all 0.5s; 
+}
+
+#image_div{
+    display: block;
+    margin: 10px;
+}
+#image{
+    border-radius: 10px;
+    margin: 5px -10px 0px 20px;
+    width: 200px;
+    height: 260px;
+}
 

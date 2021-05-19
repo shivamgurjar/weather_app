@@ -13,13 +13,18 @@
         <div>
             <input type="text" id="city_input">
         </div>
-        <div>
-            <p id="city">Jaipur, IN</p>
-            <p id="date"><script> document.write(new Date().toDateString()); </script></p>
-            <p id="tempreture">20°C</p>
-            <p id="status">Clear</p>
-            <p id="min_max">20°C / 36°C</p>
-        </div>
+            <div id="showpage" >
+                <div>
+                    <p id="city">Jaipur, IN</p>
+                <p id="date"><script> document.write(new Date().toDateString()); </script></p>
+                <p id="tempreture">20°C</p>
+                <p id="status">Clear</p>
+                <p id="min_max">20°C / 36°C</p>
+                </div>
+                <!-- This image will show the photo of the city, but there is some billing issue with my Google Cloud account.
+                I cannot access the photos through Photos Places API of Google. -->
+                <div id="image_div"><img id="image" src="images/demo.png" alt=""></div>
+            </div>
         
     </div>
 
