@@ -26,7 +26,6 @@ async function show_weather(city){
         document.getElementById('tempreture').textContent = Math.round(data.main.feels_like - 273) + "°C";
         document.getElementById('min_max').textContent = Math.round(data.main.temp_min - 273) + "°C" + ' / ' + Math.round(data.main.temp_max - 273) + "°C";
         
-
         const ic = data.weather[0].icon;
 
         // Icon for Day and Night just beside the city name
