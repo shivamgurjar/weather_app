@@ -44,6 +44,7 @@ async function show_weather(city){
 
         //let req_link = 'https://api.geonames.org/countryCodeJSON?lat='+lattitude+'&lng='+longitude+'&username=hunky_07';
         //find_country(req_link);
+        // Writing country code from openweather instead.
         document.getElementById('country').textContent = '(' + data.sys.country + ')'; 
 
         // -------------------------------------------------------------------------------------//
