@@ -57,7 +57,8 @@ async function show_weather(city){
         var time_at_city = full_date.split(" ")[1].slice(0,-3);
         var am_or_pm = full_date.split(" ")[2];
 
-        var right_time = time_at_city + " " + ((am_or_pm=="AM")?"PM":"AM");
+        if(getMobileOperatingSystem() === 'mobile')var right_time = time_at_city + " " + ((am_or_pm=="AM")?"AM":"PM");
+        else var right_time = time_at_city + " " + ((am_or_pm=="AM")?"PM":"AM");
         document.getElementById('date').textContent = new Date().toDateString() + " | " + right_time;
         //console.log(right_time);
 
@@ -83,6 +84,17 @@ function getTime(offset){
             console.log(utc.toLocaleString());
 }
 
+function getMobileOperatingSystem() {
+    var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    var element = document.getElementById('text');
+    if (isMobile) {
+          return 'mobile';
+    } else {
+        return 'desktop';
+    }
+
+}
+
 show_weather(default_city);
 inp.addEventListener('keypress', (e)=>{
     if(e.key === 'Enter'){
@@ -90,4 +102,5 @@ inp.addEventListener('keypress', (e)=>{
         show_weather(city);
     }
 })
+
 
