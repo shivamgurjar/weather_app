@@ -57,9 +57,9 @@ async function show_weather(city){
         var time_at_city = full_date.split(" ")[1].slice(0,-3);
         var am_or_pm = full_date.split(" ")[2];
 
-        if(getMobileOperatingSystem() === 'mobile')var right_time = time_at_city + " " + ((am_or_pm=="AM")?"AM":"PM");
+        if(getMobileOperatingSystem() === 'mobile')var right_time = time_at_city + " " + ((am_or_pm==="AM")?"AM":"PM");
         else{
-            var right_time = time_at_city + " " + ((am_or_pm=="AM")?"PM":"AM");
+            var right_time = time_at_city + " " + ((am_or_pm==="AM")?"PM":"AM");
             console.log("This is PC");
         }
         document.getElementById('date').textContent = new Date().toDateString() + " | " + right_time;
