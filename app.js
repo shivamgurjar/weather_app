@@ -58,7 +58,10 @@ async function show_weather(city){
         var am_or_pm = full_date.split(" ")[2];
 
         if(getMobileOperatingSystem() === 'mobile')var right_time = time_at_city + " " + ((am_or_pm=="AM")?"AM":"PM");
-        else var right_time = time_at_city + " " + ((am_or_pm=="AM")?"PM":"AM");
+        else{
+            var right_time = time_at_city + " " + ((am_or_pm=="AM")?"PM":"AM");
+            console.log("This is PC");
+        }
         document.getElementById('date').textContent = new Date().toDateString() + " | " + right_time;
         //console.log(right_time);
 
